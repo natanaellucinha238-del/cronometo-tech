@@ -8,45 +8,44 @@
     outline: none;
 }
 
+/* O segredo: Fundo roxo em TUDO e centralização total */
 body {
-    background-color: #8257e5;
+    background-color: #8257e5; /* Roxo idêntico ao print */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100vh; /* Ocupa a altura toda da tela */
+    width: 100vw;      /* Ocupa a largura toda da tela */
+    overflow-x: hidden; /* Evita barras de rolagem laterais */
 }
 
 .container {
-    background: #F4F4F4;
-    width: 375px;
+    background: #F4F4F4; /* Apenas o card é branco/cinza claro */
+    width: 375px;        /* Largura padrão do mobile no Figma */
     border-radius: 20px;
-    padding: 40px 24px;
+    padding: 44px 24px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-header {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 25px;
-}
-
-/* Estilo para a Logo Animada */
-.logo-gif {
-    width: 80px; /* Tamanho do GIF */
-    height: 80px;
-    border-radius: 50%; /* Opcional: deixa redondo */
-}
-
-main {
     display: flex;
     flex-direction: column;
 }
 
+/* Espaçamento da sua logo animada no topo */
+header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 34px;
+}
+
+.logo-top {
+    width: 250px; 
+    height: auto;
+}
+
+/* Estilização dos campos */
 label {
     font-size: 14px;
     color: #777777;
-    font-weight: 400;
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 }
 
 select, input {
@@ -72,12 +71,12 @@ button {
     font-weight: 700;
     cursor: pointer;
     margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 36px;
 }
 
 button:hover { opacity: 0.8; }
-button:active { opacity: 0.6; }
 
+/* Box de Resultado com a borda roxa fina */
 .result-box {
     border: 1px solid #7D2DCC;
     border-radius: 20px;
@@ -85,7 +84,7 @@ button:active { opacity: 0.6; }
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 }
 
 .currency-container {
@@ -95,12 +94,10 @@ button:active { opacity: 0.6; }
     text-align: center;
 }
 
-/* Estilo para as bandeiras novas via FlagCDN */
 .currency-container img {
-    width: 60px; /* Tamanho das bandeiras */
-    height: auto;
-    object-fit: contain;
-    margin-bottom: 5px;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 4px;
 }
 
 .currency-name {
@@ -115,8 +112,9 @@ button:active { opacity: 0.6; }
 }
 
 .arrow-img {
-    width: 25px;
-    margin: 10px 0;
-    /* Deixa a seta roxa */
+    width: 24px;
+    height: 24px;
+    margin: 12px 0;
+    /* Força a seta a ficar roxa */
     filter: invert(24%) sepia(91%) saturate(2321%) hue-rotate(258deg) brightness(92%) contrast(94%);
 }
