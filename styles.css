@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+}
+
+body {
+    background-color: #8257e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background: #F4F4F4;
+    width: 375px;
+    border-radius: 20px;
+    padding: 40px 24px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+/* Estilo para a Logo Animada */
+.logo-gif {
+    width: 80px; /* Tamanho do GIF */
+    height: 80px;
+    border-radius: 50%; /* Opcional: deixa redondo */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 14px;
+    color: #777777;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+select, input {
+    width: 100%;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #BBBBBB;
+    border-radius: 4px;
+    padding-left: 16px;
+    font-size: 16px;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100%;
+    height: 48px;
+    background: #7D2DCC;
+    border-radius: 5px;
+    border: none;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+button:hover { opacity: 0.8; }
+button:active { opacity: 0.6; }
+
+.result-box {
+    border: 1px solid #7D2DCC;
+    border-radius: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.currency-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilo para as bandeiras novas via FlagCDN */
+.currency-container img {
+    width: 60px; /* Tamanho das bandeiras */
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 5px;
+}
+
+.currency-name {
+    color: #777777;
+    font-size: 14px;
+}
+
+.currency-price {
+    font-weight: 700;
+    font-size: 20px;
+    color: #555555;
+}
+
+.arrow-img {
+    width: 25px;
+    margin: 10px 0;
+    /* Deixa a seta roxa */
+    filter: invert(24%) sepia(91%) saturate(2321%) hue-rotate(258deg) brightness(92%) contrast(94%);
+}

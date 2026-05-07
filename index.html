@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Moedas Global Pro</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <img src="https://i.gifer.com/ZZ5H.gif" alt="logo-animada" class="logo-gif">
+        </header>
+
+        <main>
+            <label>Converter **de**</label>
+            <select>
+                <option value="real">R$ Real brasileiro</option>
+            </select>
+
+            <label>Converter **para**</label>
+            <select id="currency-select-to">
+                <option value="dolar">US$ Dólar americano</option>
+                <option value="euro">€ Euro</option>
+                <option value="libra">£ Libra Esterlina</option>
+                <option value="iene">¥ Iene Japonês</option>
+                <option value="yuan">¥ Yuan Chinês</option>
+                <option value="bitcoin">₿ Bitcoin</option>
+            </select>
+
+            <label>Valor</label>
+            <input id="input-value" type="number" placeholder="Digite o valor">
+
+            <button id="convert-button" type="button">Converter</button>
+
+            <section class="result-box">
+                <div class="currency-container">
+                    <img src="https://flagcdn.com/w80/br.png" alt="brasil">
+                    <p class="currency-name">Real</p>
+                    <p class="currency-price" id="real-value-text">R$ 0,00</p>
+                </div>
+
+                <img class="arrow-img" src="https://cdn-icons-png.flaticon.com/512/109/109617.png" alt="seta">
+
+                <div class="currency-container">
+                    <img id="currency-img" src="https://flagcdn.com/w80/us.png" alt="moeda-alvo">
+                    <p class="currency-name" id="currency-name">Dólar americano</p>
+                    <p class="currency-price" id="target-currency-value">US$ 0,00</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
