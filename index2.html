@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevSorteio - DevClub</title>
+    <style>
+        /* CSS INTEGRADO */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif, sans-serif;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .logo {
+            width: 250px;
+            margin-bottom: 30px;
+        }
+
+        .instruction {
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        input {
+            width: 120px;
+            height: 45px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background-color: #252525;
+            color: #ffffff;
+            text-align: center;
+            font-size: 18px;
+            outline: none;
+        }
+
+        .btn-sortear {
+            width: 255px;
+            height: 50px;
+            background-color: #AEC346;
+            color: #ffffff;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-sortear:hover {
+            opacity: 0.8;
+            transform: scale(1.02);
+        }
+
+        .result-area {
+            margin-top: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #AEC346;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <img src="./assets/bf9005e4ea371946d39627b79e08544906437e6f.png alt="DevSorteio" class="logo">
+
+        <p class="instruction">Sortear um número</p>
+
+        <div class="input-group">
+            <input type="number" placeholder="entre" class="input-min">
+            <input type="number" placeholder="e" class="input-max">
+        </div>
+
+        <button onclick="generateNumber()" class="btn-sortear">Sortear</button>
+
+        <div class="result-area" id="result"></div>
+    </main>
+
+    <script>
+        function generateNumber() {
+            // Pegamos os valores dos inputs
+            const min = Math.ceil(document.querySelector(".input-min").value);
+            const max = Math.floor(document.querySelector(".input-max").value);
+            const displayResult = document.querySelector("#result");
+
+            // Validação
+            if (min === "" || max === "") {
+                alert("Por favor, preencha ambos os campos!");
+                return;
+            }
+
+            if (min >= max) {
+                alert("O valor mínimo deve ser menor que o máximo!");
+                return;
+            }
+
+            // Lógica do sorteio
+            const result = Math.floor(Math.random() * (max - min + 1)) + min;
+
+            // Mostra o resultado na tela
+            displayResult.innerHTML = "Número: " + result;
+        }
+    </script>
+
+</body>
+</html>
