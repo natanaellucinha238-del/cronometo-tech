@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Científica Pro</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+
+    <div class="calculator-container">
+        <div class="calculator">
+            <div class="display-container">
+                <div class="top-row">
+                    <span id="mode-indicator" class="mode-indicator">DEG</span>
+                    <div id="upper-display" class="upper-display"></div>
+                </div>
+                <div id="display" class="main-display">0</div>
+            </div>
+
+            <div class="buttons-grid">
+                <button class="btn toggle-btn" data-action="toggle-mode" id="btn-mode">RAD</button>
+                <button class="btn toggle-btn" data-action="toggle-history">Histórico</button>
+                <button class="btn scientific" data-op="log">log</button>
+                <button class="btn scientific" data-op="ln">ln</button>
+                <button class="btn scientific" data-op="fact">n!</button>
+
+                <button class="btn scientific" data-op="sin">sin</button>
+                <button class="btn scientific" data-op="cos">cos</button>
+                <button class="btn scientific" data-op="tan">tan</button>
+                <button class="btn scientific" data-op="^">xʸ</button>
+                <button class="btn scientific" data-op="sqrt">√</button>
+
+                <button class="btn scientific" data-constant="pi">π</button>
+                <button class="btn scientific" data-constant="e">e</button>
+                <button class="btn operator" data-num="(">(</button>
+                <button class="btn operator" data-num=")">)</button>
+                <button class="btn operator" data-op="/">/</button>
+
+                <button class="btn number" data-num="7">7</button>
+                <button class="btn number" data-num="8">8</button>
+                <button class="btn number" data-num="9">9</button>
+                <button class="btn delete" data-action="delete">DEL</button>
+                <button class="btn operator" data-op="*">×</button>
+
+                <button class="btn number" data-num="4">4</button>
+                <button class="btn number" data-num="5">5</button>
+                <button class="btn number" data-num="6">6</button>
+                <button class="btn clear" data-action="clear">AC</button>
+                <button class="btn operator" data-op="-">-</button>
+
+                <button class="btn number" data-num="1">1</button>
+                <button class="btn number" data-num="2">2</button>
+                <button class="btn number" data-num="3">3</button>
+                <button class="btn equal-large" data-action="calculate">=</button>
+                <button class="btn operator" data-op="+">+</button>
+
+                <button class="btn number btn-zero" data-num="0">0</button>
+                <button class="btn number" data-num=".">.</button>
+            </div>
+        </div>
+
+        <div id="history-panel" class="history-panel hidden">
+            <h3>Histórico <button class="clear-history-btn" id="clear-history">Limpar</button></h3>
+            <div id="history-list" class="history-list">
+                <p class="empty-msg">Nenhum cálculo recente</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts4.js"></script>
+</body>
+</html>

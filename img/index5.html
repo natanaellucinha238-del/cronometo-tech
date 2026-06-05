@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokenpô Ultimate Edition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body>
+
+    <div class="bg-overlay"></div>
+
+    <div class="game-wrapper">
+        <header>
+            <h1>JOKEN<span class="gradient-text">PÔ</span></h1>
+            <p class="subtitle">ARENA SUPREMA</p>
+        </header>
+        
+        <div class="score-container">
+            <div class="player-identity">
+                <span class="badge player-badge">VOCÊ</span>
+                <span id="player-score" class="score-digit">0</span>
+            </div>
+            <div class="vs-badge">VS</div>
+            <div class="player-identity">
+                <span id="computer-score" class="score-digit">0</span>
+                <span class="badge cpu-badge">CPU</span>
+            </div>
+        </div>
+
+        <div class="combat-arena">
+            <div class="slot" id="player-slot">
+                <div class="slot-glow"></div>
+                <div id="player-preview" class="emoji-card">?</div>
+                <span class="slot-label">Sua Escolha</span>
+            </div>
+
+            <div class="slot" id="computer-slot">
+                <div class="slot-glow"></div>
+                <div id="computer-preview" class="emoji-card">?</div>
+                <span class="slot-label">Escolha da CPU</span>
+            </div>
+        </div>
+
+        <div class="status-panel">
+            <h2 id="result-message">FAÇA SUA JOGADA</h2>
+        </div>
+
+        <div class="controls-grid">
+            <button class="control-card" data-choice="pedra">
+                <div class="card-icon">✊</div>
+                <div class="card-info">
+                    <span class="card-title">PEDRA</span>
+                    <span class="card-desc">Esmaga Tesoura</span>
+                </div>
+            </button>
+
+            <button class="control-card" data-choice="papel">
+                <div class="card-icon">✋</div>
+                <div class="card-info">
+                    <span class="card-title">PAPEL</span>
+                    <span class="card-desc">Embrulha Pedra</span>
+                </div>
+            </button>
+
+            <button class="control-card" data-choice="tesoura">
+                <div class="card-icon">✌️</div>
+                <div class="card-info">
+                    <span class="card-title">TESOURA</span>
+                    <span class="card-desc">Corta Papel</span>
+                </div>
+            </button>
+        </div>
+    </div>
+
+    <script src="scripts5.js"></script>
+</body>
+</html>
