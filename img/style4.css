@@ -70,6 +70,7 @@ h1 {
 
 .gradient-text {
     background: linear-gradient(45deg, var(--primary-neon), var(--secondary-neon));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
